@@ -11,6 +11,7 @@
 		//----------------------------------------------------------------------
 		var defaults =
 		{
+			changeCursor				: false,
 			loader						: null,
 			centerThumbs				: false,
 			timerAnimSlide				: 200,
@@ -277,8 +278,9 @@
 			
 			var _width = wrapperImagem.width();
 			var _height = wrapperImagem.height();
+			var _cursor = (plugin_settings.changeCursor) ? "cursor:move;" : "";
 			
-			var _html = "<div class='wrapper-zoom' style='cursor:move; position:absolute; top:0; left:0; z-index:10; display:none; width:"+_width+"px;height:"+_height+"px'>";
+			var _html = "<div class='wrapper-zoom' style='"+_cursor+" position:absolute; top:0; left:0; z-index:10; display:none; width:"+_width+"px;height:"+_height+"px'>";
 				_html += "<div class='content-zoom' style='position:relative; top:0; left:0; width:"+_width+"px;height:"+_height+"px'>";
 				_html += "</div>";
 				_html += "</div>";
