@@ -172,7 +172,6 @@
 			
 			$(".item",content).each(function(index, element)
 			{
-				
 				//item ativo
 				if(index == 0)
 				{
@@ -181,20 +180,22 @@
 				
 				$(element).click(function()
 				{
-					if($(".ativo", content).size()>0)
+					if(!$(element).hasClass("ativo"))
 					{
-						$(".ativo", content).removeClass("ativo");
-					}
-					
-					$(this).addClass("ativo");
-					addLoader();
-					clearTimeout(_interval);
-					_interval = setTimeout(function()
-					{
-						_loadImageMedia();
+						if($(".ativo", content).size()>0)
+						{
+							$(".ativo", content).removeClass("ativo");
+						}
+						
+						$(this).addClass("ativo");
+						addLoader();
 						clearTimeout(_interval);
-					},500);
-					
+						_interval = setTimeout(function()
+						{
+							_loadImageMedia();
+							clearTimeout(_interval);
+						},500);
+					}
 					return false;
 				});
 				
@@ -205,7 +206,8 @@
 				widthItem = $(element).outerWidth(true);
 				
 				//size content
-                _sizeItens += widthItem;
+				_sizeItens += widthItem;
+
             });
 			
 			content.width(_sizeItens);
