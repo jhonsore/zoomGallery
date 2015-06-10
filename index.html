@@ -31,24 +31,24 @@ img { display:block;}
 .center{ width:560px; margin:0 auto; margin-top:100px;}
 
 
-/*slider*/
-.slider{width:100%; margin-top:10px; position:relative;}
-.slider .container{ float:left; width:492px; overflow:hidden; margin-left:35px; position:relative; z-index:2;}
-.slider.no-margin .container{ margin-left: 0;}
-.slider .container .content{ width: 10000px}
-.slider .item{  display:block; float:left; margin-right:4px; opacity:.5;}
-.slider .item{ width:120px; height:90px;}
-.slider .item img{ width:100%;}
-.slider .item > span{ border:1px solid #ffffff; display:block;}
-.slider .item.ativo{ cursor:default;}
-.slider .item:hover, .slider .item.ativo{ opacity:1;}
-.slider .item:hover > span,.slider .item.ativo > span{ border-color:#b10000;}
+/*slider_zoom_gallery*/
+.slider_zoom_gallery{width:100%; margin-top:10px; position:relative;}
+.slider_zoom_gallery .container{ float:left; width:492px; overflow:hidden; margin-left:35px; position:relative; z-index:2;}
+.slider_zoom_gallery.no-margin .container{ margin-left: 0;}
+.slider_zoom_gallery .container .content{ width: 10000px}
+.slider_zoom_gallery .item{  display:block; float:left; margin-right:4px; opacity:.5;}
+.slider_zoom_gallery .item{ width:120px; height:90px;}
+.slider_zoom_gallery .item img{ width:100%;}
+.slider_zoom_gallery .item > span{ border:1px solid #ffffff; display:block;}
+.slider_zoom_gallery .item.ativo{ cursor:default;}
+.slider_zoom_gallery .item:hover, .slider_zoom_gallery .item.ativo{ opacity:1;}
+.slider_zoom_gallery .item:hover > span,.slider_zoom_gallery .item.ativo > span{ border-color:#b10000;}
 
-.slider .wrapper-setas-slide{ position:absolute; width:100%;}
-.slider .wrapper-setas-slide a{ width:20px; height:90px; display:block; background-color:#c9d4ca;}
-.slider .wrapper-setas-slide a:hover{ background-color:#b6bcb7;}
-.slider .wrapper-setas-slide .seta-esq{ background:url(img/arrow-left.png) no-repeat 4px 38px #c9d4ca; float:left;}
-.slider .wrapper-setas-slide .seta-dir{ background:url(img/arrow-right.png) no-repeat 6px 38px #c9d4ca; float:right;}
+.slider_zoom_gallery .wrapper-setas-slide{ position:absolute; width:100%;}
+.slider_zoom_gallery .wrapper-setas-slide a{ width:20px; height:90px; display:block; background-color:#c9d4ca;}
+.slider_zoom_gallery .wrapper-setas-slide a:hover{ background-color:#b6bcb7;}
+.slider_zoom_gallery .wrapper-setas-slide .seta-esq{ background:url(img/arrow-left.png) no-repeat 4px 38px #c9d4ca; float:left;}
+.slider_zoom_gallery .wrapper-setas-slide .seta-dir{ background:url(img/arrow-right.png) no-repeat 6px 38px #c9d4ca; float:right;}
 
 .zoom_loader{position:absolute; z-index:100; width:31px; height:31px; display:block; left:50%; top:50%; margin:-15px 0 0 -15px; z-index:999999; background-color:#ffffff; padding:10px; border-radius:10px;}
 
@@ -67,7 +67,7 @@ img { display:block;}
         <div class="wrapper-imagem">
             <!--<img src="img/media/1fccfb522e0043419884136db7f669c3.jpg">-->
         </div>
-        <div class="slider">
+        <div class="slider_zoom_gallery">
             <div class="container">
                 <div class="content">
                 	<a class="item" href="http://lorempixel.com/560/419/sports/1" data-zoom="http://lorempixel.com/1000/1000/sports/1">
@@ -79,7 +79,7 @@ img { display:block;}
                     <a class="item" href="http://lorempixel.com/560/419/fashion/1" data-zoom="http://lorempixel.com/1000/1000/fashion/1">
                     	<span><img src="http://lorempixel.com/118/88/fashion/1"></span>
                     </a>
-                    <!--<a class="item" href="img/media/1fccfb522e0043419884136db7f669c3.jpg" data-zoom="img/zoom/1fccfb522e0043419884136db7f669c3.jpg">
+                    <a class="item" href="img/media/1fccfb522e0043419884136db7f669c3.jpg" data-zoom="img/zoom/1fccfb522e0043419884136db7f669c3.jpg">
                     	<span><img src="img/thumbs/1fccfb522e0043419884136db7f669c3.jpg"></span>
                     </a>
                     <a class="item" href="img/media/5a9cc9f9b75407684cf6b8220f4fc3fd.jpg" data-zoom="img/zoom/5a9cc9f9b75407684cf6b8220f4fc3fd.jpg">
@@ -94,7 +94,7 @@ img { display:block;}
                     <a class="item" href="img/media/5ea7fe229289906d30b30b56d6183e86.jpg" data-zoom="img/zoom/5ea7fe229289906d30b30b56d6183e86.jpg">
                     	<span><img src="img/thumbs/5ea7fe229289906d30b30b56d6183e86.jpg"></span>
                     </a>
-                    <a class="item" href="img/media/9c4c58a771391151126ebf71682a2bbd.jpg" data-zoom="img/zoom/9c4c58a771391151126ebf71682a2bbd.jpg">
+                    <!--<a class="item" href="img/media/9c4c58a771391151126ebf71682a2bbd.jpg" data-zoom="img/zoom/9c4c58a771391151126ebf71682a2bbd.jpg">
                     	<span><img src="img/thumbs/9c4c58a771391151126ebf71682a2bbd.jpg"></span>
                     </a>
                     <a class="item" href="img/media/18d7e894caa6ac79e0337d2e6a444bb0.jpg" data-zoom="img/zoom/18d7e894caa6ac79e0337d2e6a444bb0.jpg">

@@ -20,7 +20,7 @@
 		
 		var plugin_settings;
 		var plugin_element;
-		var slider;
+		var slider_zoom_gallery;
 		var content;
 		var container;
 		var wrapperImagem;
@@ -155,7 +155,7 @@
 		function _initSlide () 
 		{
 			//
-			slider = $(".slider",plugin_element);
+			slider_zoom_gallery = $(".slider_zoom_gallery",plugin_element);
 			content = $(".content",plugin_element);
 			container = $(".container",plugin_element);
 			wrapperImagem = $(".wrapper-imagem",plugin_element);
@@ -213,7 +213,7 @@
 			if((content.width()-_marginRight) <= container.width())
 			{
 				$(".wrapper-setas-slide", plugin_element).hide();
-				slider.addClass("no-margin");
+				slider_zoom_gallery.addClass("no-margin");
 				container.width("100%");
 				
 				//centraliza thumbs caso a propriedade centerThumbs seja \true\
