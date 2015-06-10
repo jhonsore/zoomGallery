@@ -94,11 +94,11 @@
 			{
 				if($(".wrapper-zoom",wrapperImagem).hasClass('zoom-loaded'))
 				{
-					if(!$(".wrapper-zoom",wrapperImagem).is(':visible'))
-					{
+					//if(!$(".wrapper-zoom",wrapperImagem).is(':visible'))
+					//{
 						$(".wrapper-zoom",wrapperImagem).stop( true, true ).fadeIn(300);
 						_moveImageZoom();
-					}
+					//}
 				}
 			}
 		}
