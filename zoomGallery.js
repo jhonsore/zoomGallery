@@ -59,30 +59,10 @@
 		{
 			//plugin adicionado
 			plugin_settings.added.call();
-			
+
 			_initSlide();
 			_loadImageMedia();
-			
-			wrapperImagem.mouseenter(function()
-			{
-				_checkWrapperZoom();
-				
-			});
-			
-			wrapperImagem.mouseleave(function()
-			{
-				
-				if($(".wrapper-zoom",wrapperImagem).size()>0)
-				{
-					if($(".wrapper-zoom",wrapperImagem).hasClass('zoom-loaded'))
-					{
-						$(".wrapper-zoom",wrapperImagem).stop( true, true ).fadeOut(300);
-					}
-				}
-				
-				statusMouseOverWrapper = false;
-				
-			});
+
 			
 		}
 		
@@ -162,8 +142,24 @@
 			wrapperImagem = $(".wrapper-imagem",plugin_element);
 			setaEsq = $(".seta-esq",plugin_element);
 			setaDir = $(".seta-dir",plugin_element);
-			
+
 			wrapperImagem.css({top:0, left:0});
+			wrapperImagem.addClass('wrapper-imagem-zoom-gallery');
+
+			//inicia os eventos no wrapper imagem
+			$(document).on('mouseenter', '.wrapper-imagem-zoom-gallery', function() {alert('over');
+				_checkWrapperZoom();
+			}).on('mouseleave', '.wrapper-imagem-zoom-gallery', function() {
+				if($(".wrapper-zoom",wrapperImagem).size()>0)
+				{
+					if($(".wrapper-zoom",wrapperImagem).hasClass('zoom-loaded'))
+					{
+						$(".wrapper-zoom",wrapperImagem).stop( true, true ).fadeOut(300);
+					}
+				}
+
+				statusMouseOverWrapper = false;
+			});
 			
 			//resize content
 			var _sizeItens = 0;
